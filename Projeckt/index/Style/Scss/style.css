@@ -29,8 +29,8 @@
 .toggle::before {
   content: "";
   position: absolute;
-  width: 26px;
-  height: 3px;
+  width: 36px;
+  height: 6px;
   border-radius: 3px;
   transform: translateY(-5deg);
   transition: 1s;
@@ -40,8 +40,8 @@
 .toggle::after {
   content: "";
   position: absolute;
-  width: 26px;
-  height: 3px;
+  width: 36px;
+  height: 6px;
   border-radius: 3px;
   transform: translatey(-5deg) rotate(10deg);
   transition: 1s;
@@ -49,11 +49,11 @@
 }
 
 .navigation.active .toggle::before {
-  transform: translatey(10px) rotate(-408deg);
+  transform: translatey(5px) rotate(-140deg);
 }
 
 .navigation.active .toggle::after {
-  transform: translatey(10px) rotate(-380deg);
+  transform: translatey(5px) rotate(140deg);
 }
 
 .navigation.active {
@@ -71,6 +71,22 @@
   list-style: none;
   width: 100%;
 }
+.navigation ul li:nth-child(1) {
+  top: 20ox;
+  margin-bottom: 40px;
+  background-color: none;
+}
+.navigation ul li:not(:first-child):hover::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 0, 0, 0);
+  top: -20px;
+  right: 0;
+  box-shadow: 7.5px 7.5px 0 7.5px #fff;
+  border-bottom-right-radius: 20px;
+}
 .navigation ul li:hover {
   background-color: #fff;
   color: #222;
@@ -81,7 +97,27 @@
   width: 100%;
   display: flex;
   text-decoration: none;
-  color: #ffffff;
+  color: #fff;
+}
+.navigation ul li a .icon {
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  line-height: 70px;
+  text-align: center;
+}
+.navigation ul li a .icon ion-icon {
+  font-size: 1.7rem;
+}
+.navigation ul li a .title {
+  position: relative;
+  display: block;
+  padding: 0 5px;
+  height: 60px;
+  line-height: 60px;
+  text-align: srart;
+  white-space: nowrap;
 }
 
 .navigation ul li:hover:not(:first-child) a {
